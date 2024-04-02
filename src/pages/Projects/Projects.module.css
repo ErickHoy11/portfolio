@@ -1,0 +1,13 @@
+.main{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: hsl(0, 0%, 90%);
+}
+
+/*mobile responsive main*/
+@media screen and (max-width:575px){
+    .main{
+        width: 100%;
+    }
+}

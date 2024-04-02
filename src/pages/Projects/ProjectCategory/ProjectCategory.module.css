@@ -1,0 +1,58 @@
+.project_category{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.project_category_title{
+    text-align: center;
+    margin-bottom: 0px;
+    color: green;
+}
+
+.project{
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px hsl(0, 0%, 10%);    
+}
+
+.project_left_right_organizer{
+    display: flex;
+    column-gap: 10px;
+}
+
+
+.project_left {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    width: 50%;
+}
+
+.project_right{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    width: 50%;
+}
+
+.project_right img{
+    width: 75%; /* Image width fills the container */
+    max-height: 150px;
+    object-fit:contain; /* Maintain aspect ratio and cover the container */
+}
+
+/*mobile responsive main*/
+@media screen and (max-width:575px){
+    .project{
+        width: 90%;
+    }
+}

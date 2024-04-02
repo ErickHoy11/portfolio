@@ -1,0 +1,72 @@
+.main *{
+    color: white;
+    text-align: center;
+}
+
+.hero_banner{
+    background-image: radial-gradient(circle 25em at 24%, white, hsl(0, 0%, 7%));
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.hero_banner_left{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_banner_left img{
+    height: 100%;
+}
+
+.hero_banner_right{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.hero_banner button {
+    background-color: hsl(120, 100%, 30%);
+    border: none;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 40px;
+}
+
+.hero_banner button:hover {
+    cursor: pointer;
+    background-color: hsl(120, 100%, 40%);
+}
+.hero_banner_right a{
+    color: hsl(200, 75%, 50%);
+}
+
+
+/*mobile responsive hero_banner*/
+@media screen and (max-width:575px){
+    .hero_banner{
+        background-image: radial-gradient(circle 15em at 50% 15% , white, hsl(0, 0%, 7%));
+        height: 450px;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+    }
+    .hero_banner_left{
+        height: 50%;
+    }
+    .hero_banner_right h1{
+        text-decoration: underline;
+    }
+    .hero_banner_right *{
+        margin: 5px;
+    }
+}

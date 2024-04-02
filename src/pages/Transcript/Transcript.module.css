@@ -1,0 +1,20 @@
+.pdf{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iframe {
+    width: 80%;
+    height: 96vh;
+    border: none; /* Remove iframe border */
+}
+
+/*mobile responsive iframe*/
+@media screen and (max-width:767px){
+    .iframe {
+        width: 98%
+    }
+}

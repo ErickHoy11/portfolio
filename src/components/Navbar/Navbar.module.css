@@ -1,0 +1,20 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width:100%;
+    background-color: hsl(0, 0%, 0%);
+
+    column-gap: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar a{
+    color: hsl(0, 100%, 55%);
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: hsl(0, 100%, 80%);
+}
