@@ -5,20 +5,41 @@ import Transcript from './pages/Transcript/Transcript'
 import Projects from './pages/Projects/Projects'
 import Footer from './components/Footer/Footer'
 
-import { useState } from 'react'
+import { useState, createContext } from 'react';
 import './App.css'
 
+export const handleMainPageChangeContext = createContext();
+
+
 function App() {
+
+  const [mainPage, setMainPage] = useState(<Home/>)
+
+  const handleMainPageChange = (mainPageTitle) =>{
+    switch(mainPageTitle){
+      case "home":
+        setMainPage(<Home/>);
+        break;
+      case "resume":
+        setMainPage(<Resume/>);
+        break;
+      case "transcript":
+        setMainPage(<Transcript/>);
+        break;
+      case "projects":
+      setMainPage(<Projects/>);
+      break;
+    }
+  }
 
 
   return (
     <>
-      <Navbar></Navbar>
-      <Home></Home>
+    <handleMainPageChangeContext.Provider value={handleMainPageChange}>
+      <Navbar onClick={handleMainPageChange}></Navbar>
+      {mainPage}
       <Footer></Footer>
-      <Resume></Resume>
-      <Transcript></Transcript>
-      <Projects></Projects>
+    </handleMainPageChangeContext.Provider>
     </>
   )
 }

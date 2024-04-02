@@ -21,3 +21,9 @@ body {
 h1{
   text-align: center;
 }
+
+a{
+  color: hsl(200, 75%, 50%);
+  text-decoration: underline;
+  cursor: pointer;
+}
