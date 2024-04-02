@@ -10,7 +10,6 @@ import './App.css'
 
 export const handleMainPageChangeContext = createContext();
 
-
 function App() {
 
   const [mainPage, setMainPage] = useState(<Home/>)

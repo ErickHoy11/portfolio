@@ -22,6 +22,10 @@
     box-shadow: 3px 3px 5px hsl(0, 0%, 10%);    
 }
 
+.project a{
+    color: rgb(50, 0, 200);
+}
+
 .project_left_right_organizer{
     display: flex;
     column-gap: 10px;
