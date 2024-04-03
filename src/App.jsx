@@ -35,7 +35,7 @@ function App() {
   return (
     <>
     <handleMainPageChangeContext.Provider value={handleMainPageChange}>
-      <Navbar onClick={handleMainPageChange}></Navbar>
+      <Navbar></Navbar>
       {mainPage}
       <Footer></Footer>
     </handleMainPageChangeContext.Provider>

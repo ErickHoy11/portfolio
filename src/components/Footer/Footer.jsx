@@ -9,7 +9,7 @@ function Footer(){
 
     <footer className={styles.footer}>
         <h2>This website was made with the React.js Library</h2>
-        <p>To see projects built using PHP, MySQL, React, Node.js, and WordPress: visit <a onClick={() => handleMainPageChange("projects")}>Projects</a></p>
+        <p>To see projects built using PHP, MySQL, React, and WordPress: visit <a onClick={() => handleMainPageChange("projects")}>Projects</a></p>
         <p>To see a list of other software developement skills (Python, Java, OOP, etc): visit <a onClick={() => handleMainPageChange("resume")}>Resume</a></p>
         <p>For proof of 4.0 GPA: visit <a onClick={() => handleMainPageChange("transcript")}>Transcript</a></p>
         <p> <a href="https://leetcode.com/erickhoysale/" target="_blank">LeetCode</a>&nbsp;
