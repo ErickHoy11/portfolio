@@ -1,46 +1,15 @@
+import './App.css'
 import Navbar from './components/Navbar/Navbar'
-import Home from './pages/Home/Home'
-import Resume from './pages/Resume/Resume'
-import Transcript from './pages/Transcript/Transcript'
-import Projects from './pages/Projects/Projects'
 import Footer from './components/Footer/Footer'
 
-import { useState, createContext } from 'react';
-import './App.css'
+import {Outlet} from "react-router-dom"
 
-export const handleMainPageChangeContext = createContext();
-
-function App() {
-
-  const [mainPage, setMainPage] = useState(<Home/>)
-
-  const handleMainPageChange = (mainPageTitle) =>{
-    switch(mainPageTitle){
-      case "home":
-        setMainPage(<Home/>);
-        break;
-      case "resume":
-        setMainPage(<Resume/>);
-        break;
-      case "transcript":
-        setMainPage(<Transcript/>);
-        break;
-      case "projects":
-      setMainPage(<Projects/>);
-      break;
-    }
-  }
-
-
+export default function App() {
   return (
     <>
-    <handleMainPageChangeContext.Provider value={handleMainPageChange}>
-      <Navbar></Navbar>
-      {mainPage}
-      <Footer></Footer>
-    </handleMainPageChangeContext.Provider>
+      <Navbar/>
+      <Outlet/>
+      <Footer/>
     </>
   )
 }
-
-export default App

@@ -1,5 +1,7 @@
 import styles from "./Resume.module.css"
 
+import { Link } from 'react-router-dom';
+
 function Resume(){
     return(
     <>
@@ -91,7 +93,7 @@ function Resume(){
                 {/*projects*/}
                 <section>
                     <h2 className={styles.resume_section_title}>Projects</h2>
-                    <p><a href="https://erickhoy.com/projects.html">https://erickhoy.com/projects</a></p>
+                    <p><Link to={"/projects"}>https://erickhoy.com/projects</Link></p>
                     <p>Please visit this site to see a collection of my web development projects.</p>
                 </section>
 

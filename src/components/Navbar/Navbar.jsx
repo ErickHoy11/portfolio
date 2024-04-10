@@ -1,21 +1,17 @@
 import styles from "./Navbar.module.css"
-import {useContext} from 'react';
-import { handleMainPageChangeContext } from "../../App";
 
-function Navbar(){
+import { Link } from 'react-router-dom';
 
-    const handleMainPageChange = useContext(handleMainPageChangeContext);
+export default function Navbar(){
 
     return(    
-    <header>
-        <nav className={styles.navbar}>
-            <a onClick={() => handleMainPageChange("home")}>Home</a>
-            <a onClick={() => handleMainPageChange("resume")}>Resume</a>
-            <a onClick={() => handleMainPageChange("projects")}>Projects</a>
-            <a onClick={() => handleMainPageChange("transcript")}>Transcript</a>
-        </nav>
-    </header>
+        <header>
+            <nav className={styles.navbar}>
+                <Link to={""}>Home</Link>
+                <Link to={"/Resume"}>Resume</Link>
+                <Link to={"/Projects"}>Projects</Link>
+                <Link to={"/Transcript"}>Transcript</Link>
+            </nav>
+        </header>
     )
 }
-
-export default Navbar
